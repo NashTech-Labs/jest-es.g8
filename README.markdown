@@ -1,16 +1,36 @@
-A [Giter8][g8] template for Jest Client!
+A [Giter8][g8] template for Jest Client.
 
 Jest provides an implementation of the Elasticsearch REST API. It is a Java HTTP Rest client for ElasticSearch.  It’s API is similar to Elasticsearch API.
 
-Pre-requisite for running project:</br> 
-ElasticSearch should be up and running. You can download it from https://www.elastic.co/downloads/elasticsearch. Elasticsearch runs on port 9200.</br>
-To run this project:</br>
-1. cd src/main/g8
-2. sbt clean compile run
+**Pre-requisite for running the project**
 
-We can also visualize the data using Kibana. Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. you can download Kibana from https://www.elastic.co/downloads/kibana.
+ElasticSearch should be up and running. You can download it from [here](https://www.elastic.co/downloads/elasticsearch). Elasticsearch runs on port 9200.
 
-To see data is inserted or not we can query on kibana console:
+**How to setup ?**
+
+**1) Clone the application**
+  
+  `sbt new knoldus/jest-es.g8`
+  
+  **2 Give name to your application**
+    
+    name jest //you could give any name for example jest 
+
+**3) Compile and run the application**
+  
+    cd jest
+    sbt clean compile 
+    sbt run 
+ 
+ **4) Test the application**
+    
+    sbt clean test 
+
+
+We can also visualize the data using Kibana. Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. 
+You can download Kibana from [here](https://www.elastic.co/downloads/kibana).
+
+**To see data is inserted or not we can query on kibana console:**
 1. GET /_cat/indices?v
 - will show the created indexes
 2. GET company/_search
@@ -22,13 +42,11 @@ GET company/_search
 }
 - will show all the values of company index
 
-For more details refere to:
-https://blog.knoldus.com/2018/02/13/exploring-jest-java-http-rest-client/</br>
+For more details [refer](https://blog.knoldus.com/2018/02/13/exploring-jest-java-http-rest-client/)
 
 Template license
 ----------------
-Written in <YEAR> by <AUTHOR NAME> <AUTHOR E-MAIL ADDRESS>
-[other author/contributor lines as appropriate]
+Written in <2018> by <Shivangi Gupta> <shivangi1015@gmail.com>
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
 and neighboring rights to this template to the public domain worldwide.
